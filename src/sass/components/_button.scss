@@ -1,0 +1,11 @@
+.button-container{
+    display: grid;
+    place-content : center center;
+    width: 65px;
+    height: 65px;
+    background-color: var(--key-background-common);
+    color: var(--text-color-common-key);
+    border-radius: 8px;
+    box-shadow: 0px 5px var(--key-shadow-common)
+
+};

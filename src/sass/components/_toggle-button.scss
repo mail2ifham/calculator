@@ -1,0 +1,38 @@
+@use "../base/variables" as v;
+
+.toggle-btn-container {
+  width: 25%;
+  .toggle-switch {
+    appearance: none;
+    width: 100%;
+    background-color: var(--toggle-and-keypad-background);
+    border-radius: 10px;
+    margin: 0;
+    padding: 0 3px;
+    height: 23px;
+    cursor: pointer;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--key-background-equal-and-toggle);
+    }
+
+    &::-webkit-slider-runnable-track {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  datalist {
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: space-evenly;
+
+    option {
+      font-weight: v.$font-weight + 200;
+    }
+  }
+}

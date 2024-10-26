@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import "./sass/app.scss";
+import Display from "./components/display/Display";
+import KeyPad from "./components/keyPad/KeyPad";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="wrapper" >
+      <Header />
+      <Display/>
+      <KeyPad/>
+      {/* <Footer /> */}
+    </div>
+  );
 }
 
-export default App
+export default App;
+
+// - See the size of the elements adjust based on their device's screen size
+// - Perform mathematical operations like addition, subtraction, multiplication, and division
+// - Adjust the color theme based on their preference
+// - **Bonus**:
+//   Have their initial theme preference checked using `prefers-color-scheme` and
+//   have any additional changes saved in the browser

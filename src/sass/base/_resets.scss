@@ -1,0 +1,26 @@
+@use '../base/variables' as v;
+@use '../base/color' as *;
+@use '../base/each' as *;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: var(--main-background);
+    color: var(--text-color-common-primary);
+    font-family: v.$font-family;
+    font-weight: v.$font-weight;
+    font-size: v.$font-size;
+}
+
+
+a{
+   &:link{
+    color: var(--text-color-common-primary);
+    }
+}
