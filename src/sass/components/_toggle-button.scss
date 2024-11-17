@@ -1,7 +1,7 @@
 @use "../base/variables" as v;
 
 .toggle-btn-container {
-  width: 25%;
+  width: 70px;
   .toggle-switch {
     appearance: none;
     width: 100%;
@@ -11,6 +11,8 @@
     padding: 0 3px;
     height: 23px;
     cursor: pointer;
+
+    
 
     &::-webkit-slider-thumb {
       appearance: none;

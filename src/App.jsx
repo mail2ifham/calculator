@@ -3,23 +3,23 @@ import Footer from "./components/footer/Footer";
 import "./sass/app.scss";
 import Display from "./components/display/Display";
 import KeyPad from "./components/keyPad/KeyPad";
+import { useRef, useState } from "react";
 
 function App() {
+  
+  const [value,setValue] = useState({mainValue:"",currentValue:""})
+  const charCountRef = useRef(0)
+
   return (
     <div className="wrapper" >
       <Header />
-      <Display/>
-      <KeyPad/>
-      {/* <Footer /> */}
+      <Display value={value} charCountRef={charCountRef}/>
+      <KeyPad value={value} setValue={setValue} charCountRef={charCountRef}/>
+      <Footer />
     </div>
   );
 }
 
 export default App;
 
-// - See the size of the elements adjust based on their device's screen size
-// - Perform mathematical operations like addition, subtraction, multiplication, and division
-// - Adjust the color theme based on their preference
-// - **Bonus**:
-//   Have their initial theme preference checked using `prefers-color-scheme` and
-//   have any additional changes saved in the browser
+

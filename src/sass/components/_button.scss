@@ -1,11 +1,31 @@
-.button-container{
-    display: grid;
-    place-content : center center;
-    width: 65px;
-    height: 65px;
-    background-color: var(--key-background-common);
-    color: var(--text-color-common-key);
-    border-radius: 8px;
-    box-shadow: 0px 5px var(--key-shadow-common)
+@use "../base/variables" as v;
+@use "../base/mixin" as *;
 
-};
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 65px;
+  height: 65px;
+  background-color: var(--key-background-common);
+  border-radius: 8px;
+  box-shadow: 0px 5px var(--key-shadow-common);
+  button {
+    width: 100%;
+    height: 100%;
+    color: var(--text-color-common-key);
+    font-weight: v.$font-weight;
+    font-size: v.$font-size;
+    font-family: v.$font-family;
+  }
+
+  &:hover {
+
+    background-color: color-mix(
+      in oklab,
+      var(--key-background-common) 70%,
+      white
+    );
+  }
+}

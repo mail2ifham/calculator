@@ -1,0 +1,10 @@
+
+@mixin button-sade($color,$font-size){
+        color: $color;
+        font-size: $font-size;
+}
+
+@mixin hover-sade($color,$amount){
+    background-color: lighten($color: $color, $amount: $amount);
+
+ }

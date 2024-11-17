@@ -1,3 +1,44 @@
-.key-pad-container{
-    background-color: var(--toggle-and-keypad-background);
+@use "../base/mixin" as m;
+@use "../base/color" as *;
+@use "../base/variables" as *;
+
+.key-pad-container {
+  padding: 24px;
+  background-color: var(--toggle-and-keypad-background);
+  border-radius: 10px;
+
+  .key-17,
+  .key-16 {
+    box-shadow: 0px 5px var(--key-shadow-del-and-reset);
+    background-color: var(--key-background-del-and-reset);
+
+    &:hover {
+      background-color: color-mix(
+        in oklab,
+        var(--key-background-del-and-reset) 85%,
+        white
+      );
+    }
+
+    button {
+      @include m.button-sade(var(--text-color-secondary), 1.5rem);
+    }
+  }
+  .key-18 {
+    background-color: var(--key-background-equal-and-toggle);
+    color: var(--text-color-equal);
+    box-shadow: 0px 5px var(--key-shadow-toggle-equal);
+
+    &:hover {
+      background-color: color-mix(
+        in oklab,
+        var(--key-background-equal-and-toggle) 80%,
+        white
+      );
+    }
+
+    button {
+      @include m.button-sade(var(--text-color-secondary), 1.5rem);
+    }
+  }
 }
