@@ -17,6 +17,7 @@ function ToggleButton() {
           <option label="3"></option>
         </datalist>
         <input className="toggle-switch"
+        aria-label="switch"
           type="range"
           name="points"
           onChange={(e)=>dispatch({ type: e.target.value })}
