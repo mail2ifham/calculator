@@ -6,17 +6,17 @@ import KeyPad from "./components/keyPad/KeyPad";
 import { useRef, useState } from "react";
 
 function App() {
-  
+
   const [value,setValue] = useState({mainValue:"",currentValue:""})
   const charCountRef = useRef(0)
 
   return (
-    <div className="wrapper" >
+    <main className="wrapper" >
       <Header />
       <Display value={value} charCountRef={charCountRef}/>
       <KeyPad value={value} setValue={setValue} charCountRef={charCountRef}/>
       <Footer />
-    </div>
+    </main>
   );
 }
 

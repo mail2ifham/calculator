@@ -10,7 +10,7 @@ function ToggleButton() {
 
   return (
 
-      <div className="toggle-btn-container">
+      <form className="toggle-btn-container">
         <datalist id="theme">
           <option  label="1"></option>
           <option  label="2"></option>
@@ -26,7 +26,7 @@ function ToggleButton() {
           list="theme"
           value={theme.value}
         />
-      </div>
+      </form>
 
   );
 }
