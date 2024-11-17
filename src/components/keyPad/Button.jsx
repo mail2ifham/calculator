@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 function Button({
   btnText,
   id,
@@ -120,7 +122,7 @@ function Button({
         break;
     }
   }
-
+  
   return (
     <li key={id} tabIndex={0} className={`button-container key-${id}`}>
       <button onClick={handleClick}>{btnText}</button>

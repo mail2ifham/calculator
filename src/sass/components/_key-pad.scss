@@ -15,7 +15,7 @@
     &:hover {
       background-color: color-mix(
         in oklab,
-        var(--key-background-del-and-reset) 85%,
+        var(--key-background-del-and-reset) 80%,
         white
       );
     }
@@ -28,17 +28,15 @@
     background-color: var(--key-background-equal-and-toggle);
     color: var(--text-color-equal);
     box-shadow: 0px 5px var(--key-shadow-toggle-equal);
-
+    button {
+      @include m.button-sade(var(--text-color-secondary), 1.5rem);
+    }
     &:hover {
       background-color: color-mix(
         in oklab,
         var(--key-background-equal-and-toggle) 80%,
-        white
+        white 
       );
-    }
-
-    button {
-      @include m.button-sade(var(--text-color-secondary), 1.5rem);
     }
   }
 }
